@@ -3,10 +3,15 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { motion } from 'framer-motion'
+import Button from "./button"
+import Link from "next/link"
+import {useState} from "react"
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+ 
 
   const contentAnimation = {
     hidden:{
@@ -69,31 +74,37 @@ export default function Home() {
         <link rel="icon" href="/Header- Logo.jpg" />
       </Head>
 
-      <div className='flex items-center justify-center mt-[0px]'>
-        <div className='relative rounded-2xl  w-[430px] '>
-        <div className="absolute top-0 left-0">
-            <Image src="/Shapes.png" width={250} height={200} alt="vector"/>
+      <div className='items-center justify-center flex flex-col '>
+
+        <div className='HomeContainer flex flex-col items-center justify-center'>
+          <div className='relative TopHeader'>
+            <div className='absolute top-0 left-0'>
+            <Image src="/Shapes.png" width={250} height={200} alt="bannerImage"/>
+            </div>
+            <div className='w-full'>
+              <Image src="/Vector 1.png" width={450} height={200} alt="bannerImage"/>
+
+            </div>
+            <div className='ImagePerson absolute top-[250px] left-[30px]'>
+          <Image src="/undraw_teacher_35j2 1.png" width={300} height={200} alt="bannerImage"/>
+          </div>
           </div>
 
-          <div>
-            <Image src="/Vector 1.png" width={450} height={200} alt="vector"/>
-          </div>
-          <motion.div className='flex items-center justify-center ' >
-          <Image src="/undraw_teacher_35j2 1.png" width={250} height={200} alt="vector"/>
-          </motion.div>
+          <div className='Heading'>
+            <h1 className='font-bold text-2xl'>Transvet</h1>
 
-          <motion.div className='flex flex-col items-center justify-center mt-[40px] p-3 py-4 homeContent' variants={contentAnimation} initial="hidden" animate="visible">
-            <motion.h1 className='text-center font-bold text-2xl mb-[20px]' variants={contentHeading}>Transvet</motion.h1>
-            <motion.p variants={pAnimate} className='text-center p-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At urna, sit consequat luctus et. Quis vitae in blandit nisl, facilisis fermentum. Pharetra consequat scelerisque dapibus nunc amet non ut. Morbi ut eu non quis ipsum.
-
-            </motion.p>
-            <div className='flex flex-col items-center justify-center gap-[20px] mt-[20px] '>
-            <motion.button className='bg-[#ACB4F8] flex items-center justify-center p-2 w-[300px] font-bold h-[50px]' variants={btnAnimate}>Sign Up</motion.button>
-            <motion.button className='bg-[#ACB4F8] flex items-center justify-center p-2 w-[300px] font-bold h-[50px]'  variants={btnAnimate}>Log in</motion.button>
           </div>
-          </motion.div>
+
+          <div className='para p-2 flex flex-col items-center justify-center'>
+          <motion.p className="text-center text-sm p-2">Transvet, take your audio and written words and translate into different languages of choice from different countries.</motion.p>
+          <br/><motion.span className='font-extrabold text-center' initial={{opacity:0,scale:3}} animate={{opacity:1,scale:1}} transition={{duration:0.4,delay:0.3,type:"spring"}}>Get Started Now.</motion.span>
+          </div>
+<div>
+  <Button/>
+</div>
+        
+
          
-
         </div>
 
 
