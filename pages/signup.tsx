@@ -70,9 +70,9 @@ function Signup() {
           }
       }
   return (
-    <div className='flex items-center justify-center mt-[0px]'>
+    <div className='flex items-center justify-center mt-[0px] h-[100vh]'>
     <div className='relative rounded-2xl h-[400px] w-[430px] '>
-    <div className="absolute top-0 left-0">
+    <div className="absolute -top-[250px] left-0">
         <Image src="/Shapes.png" width={250} height={200} alt="vector"/>
       </div>
 
@@ -83,11 +83,11 @@ function Signup() {
 </motion.p>
       </div>
 
-      <div>
+      <div style={{marginTop:'-250px'}}>
         <Image src="/Vector 1 (1).png" width={450} height={200} alt="vector"/>
       </div>
-
-      <motion.div className='flex flex-col items-center justify-center  p-3  homeContent py-4 -mt-[30px]'  initial="hidden" animate="visible" variants={contentAnimation}>
+<br/><br/><br/><br/><br/><br/>
+      <motion.div className='flex flex-col items-center justify-center  p-3  homeContent py-4 mt-[70px]'  initial="hidden" animate="visible" variants={contentAnimation}>
 
         <motion.div className='bg-white flex p-2 w-[350px] font-bold h-[50px] rounded-full' variants={btnAnimate}><input type="text" placeholder="Enter your full name" className='px-2'/></motion.div><br/>
         <motion.div className='bg-white flex p-2 w-[350px] font-bold h-[50px] rounded-full' variants={iAnimate}><input type="email" placeholder="Enter your email" className='px-2'/></motion.div><br/>

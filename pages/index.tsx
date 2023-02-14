@@ -74,14 +74,14 @@ export default function Home() {
         <link rel="icon" href="/Header- Logo.jpg" />
       </Head>
 
-      <div className='items-center justify-center flex flex-col '>
+      <div className='items-center justify-center flex flex-col h-[100vh] '>
 
         <div className='HomeContainer flex flex-col items-center justify-center'>
           <div className='relative TopHeader'>
-            <div className='absolute top-0 left-0'>
+            <div className='absolute -top-[60px] left-0 right-0'>
             <Image src="/Shapes.png" width={250} height={200} alt="bannerImage"/>
             </div>
-            <div className='w-full'>
+            <div className='w-full ' style={{marginTop:'-50px'}}>
               <Image src="/Vector 1.png" width={450} height={200} alt="bannerImage"/>
 
             </div>

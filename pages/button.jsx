@@ -61,7 +61,7 @@ function Button() {
   return (
    
     <motion.div className='flex flex-col items-center justify-center gap-[20px] mt-[0px] py-3' variants={contentAnimation} initial="hidden" animate="visible" >
- \ <div> {open ? null :(<motion.button className='bg-[#ACB4F8] flex items-center justify-center p-2 w-[300px] font-bold h-[50px]' variants={btnAnimate} exit={{x:500}} onClick={()=>setOpen(!open)}>Create Account</motion.button>)}
+ <div> {open ? null :(<motion.button className='bg-[#ACB4F8] flex items-center justify-center p-2 w-[300px] font-bold h-[50px]' variants={btnAnimate} exit={{x:500}} onClick={()=>setOpen(!open)}>Create Account</motion.button>)}
     {open ?(<motion.button className='bg-[#ACB4F8] flex items-center justify-center p-2 w-[300px] font-bold h-[50px]' variants={signupAnimate}><Link href="/signup">Sign Up</Link></motion.button>):null}</div>
    <div> {opened ? null :(<motion.button className='bg-[#ACB4F8] flex items-center justify-center p-2 w-[300px] font-bold h-[50px]' variants={btnAnimate} onClick={()=>setOpened(!opened)}>Get Started</motion.button>)}
     {opened ?( <motion.button className='bg-[#ACB4F8] flex items-center justify-center p-2 w-[300px] font-bold h-[50px]' variants={loginAnimate}><Link href="/login">Login</Link></motion.button>):null}</div>

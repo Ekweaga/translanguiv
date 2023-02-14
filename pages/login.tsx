@@ -71,7 +71,7 @@ function Login() {
       }
 
   return (
-    <div className='flex items-center justify-center flex-col'>
+    <div className='flex items-center justify-center flex-col h-[100vh]'>
        <div className='HomeContainer flex flex-col items-center justify-center'>
 
         <div className='relative'>
